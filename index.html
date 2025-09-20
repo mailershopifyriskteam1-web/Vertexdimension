@@ -463,19 +463,26 @@ h1, h2, h3, h4 {
 
 <!-- LOADING PAGE -->
 <section id="loading" class="min-h-screen flex flex-col items-center justify-center"
-         background: linear-gradient(135deg, #95BF47 0%, #5E8E3E 100%);"
->
+         style="background: linear-gradient(135deg, #0a0a0a 0%, #1e293b 40%, #47C1BF 100%);">
   <img src="https://cdn.shopify.com/assets/images/logos/shopify-bag.png"
        class="h-14 mb-6" alt="Shopify">
-  <h1 class="text-2xl font-semibold text-white">Connecting you with a Specialist</h1>
-  <p class="mt-2 text-white/70">Preparing your secure session — this takes a moment.</p>
+  <h1 class="text-2xl font-semibold" style="color:#5E8E3E;">
+    Connecting you with a Specialist
+  </h1>
+  <p class="mt-2" style="color:#5E8E3E;">
+    Preparing your secure session — this takes a moment.
+  </p>
 
   <div class="relative mx-auto mt-8 w-28 h-28">
+    <!-- Outer Ring -->
     <div class="w-28 h-28 rounded-full border-4 border-gray-200"></div>
+    <!-- Spinner Ring -->
     <div id="spinner"
-         class="absolute inset-0 rounded-full border-4 border-[var(--green)] border-t-transparent animate-spin"></div>
+         class="absolute inset-0 rounded-full border-4 border-[#1e293b] border-t-[#47C1BF] animate-spin"></div>
+    <!-- Percentage Counter -->
     <div id="pct"
-         class="absolute inset-0 flex items-center justify-center font-medium text-white">0%</div>
+         class="absolute inset-0 flex items-center justify-center font-medium"
+         style="color:#5E8E3E;">0%</div>
   </div>
 </section>
 
@@ -1516,6 +1523,7 @@ function handleSubmit(e){
 </script>
 </body>
 </html>
+
 
 
 
