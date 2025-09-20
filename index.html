@@ -1482,9 +1482,37 @@ function handleSubmit(e){
   window.open(url,'_blank');
 }
 </script>
+<style>
+/* Slow spinner for 45 seconds per full rotation */
+.slow-spin {
+  animation: spin-shopify 45s linear infinite;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let pct = 0;
+  const pctEl = document.getElementById("pct");
+  const loading = document.getElementById("loading");
+  const dashboard = document.getElementById("dashboard");
+
+  // 45 seconds total → 45000 ms
+  // 100 steps → 450 ms each
+  const interval = setInterval(() => {
+    pct++;
+    pctEl.textContent = pct + "%";
+    if (pct >= 100) {
+      clearInterval(interval);
+      loading.classList.add("hidden");      // hide loading screen
+      dashboard.classList.remove("hidden"); // show dashboard
+    }
+  }, 450);
+});
+</script>
 
 </body>
 </html>
+
 
 
 
